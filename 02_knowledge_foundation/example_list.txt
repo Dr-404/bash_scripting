@@ -1,0 +1,11 @@
+apple
+cat
+book
+apple
+dog
+car
+cat
+dog
+airplane
+car
+apple
