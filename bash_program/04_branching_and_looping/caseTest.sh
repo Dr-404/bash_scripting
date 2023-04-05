@@ -8,7 +8,7 @@
 
 read -p "Enter Your number : " num
 
-
+: '
 # if Statement
 
 if [[ $num -eq 1 ]]
@@ -28,10 +28,8 @@ then
 	echo "This is 3"
 else
 	echo "Not Valid"
-fi
+fi'
 
-
-: '
 # Case Statement
 
 
@@ -43,4 +41,4 @@ case $num in
 3) 	echo "Hello"
 	echo "This is 3 with case" ;;
 *) 	echo "Not Valid with case"
-esac'
+esac

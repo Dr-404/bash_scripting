@@ -10,9 +10,9 @@
 # Store user input into $num variable
 
 read -p "Enter Your Number: " num
-
-# If statement
 : '
+# If statement
+
 if [[ $num -lt 5 ]]
 then
 	echo "Hello World from it statement"
@@ -20,8 +20,8 @@ then
 	echo $num
 
 fi
-'
 
+'
 
 # While Statement
 
@@ -31,6 +31,7 @@ do
 	num=$[ $num + 1]
 	echo $num
 done
+
 
 
 
