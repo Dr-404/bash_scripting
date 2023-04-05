@@ -1,8 +1,8 @@
 # Concept of well-written script
 
-- Wirte code that is `readable` and has an easy flow
+- Write code that is `readable` and has an easy flows
 
-- write pleanty of comments describing the steps and `what our philosophy` is, `how we are using input, output, variable and files`
+- write plenty of comments describing the steps and `what our philosophy` is, `how we are using input, output, variable and files`
 
 - use hash mark, `#`, precedes each line of a comment
 
@@ -109,4 +109,4 @@ subl "$file_path"
 -  Any text between the `<<` and `EOF` lines is treated as input for the cat command.
 
 
-** Always rewirte your code into clear and readable format **
+** Always rewrite your code into clear and readable format **
