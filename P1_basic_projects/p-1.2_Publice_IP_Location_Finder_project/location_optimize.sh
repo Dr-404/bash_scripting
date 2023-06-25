@@ -9,11 +9,11 @@
 # Function to display the script banner
 function display_banner {
   cat << 'EOF'
-   __  ______  _____  __               __  _             _____        __       
-  /  |/  / _ \/ ___/ / / ___ _______ _/ /_(____  ___    / __(____ ___/ ___ ____
- / /|_/ / ___/ /__  / /_/ _ / __/ _ `/ __/ / _ \/ _ \  / _// / _ / _  / -_/ __/
-/_/  /_/_/   \___/ /____\___\__/\_,_/\__/_/\___/_//_/ /_/ /_/_//_\_,_/\__/_/
-                                                         Dr. Htun Aung Kyaw
+   __  ______  _____  ___              __              
+  /  |/  / _ \/ ___/ / _ |_______ ____/ /__ __ _  __ __
+ / /|_/ / ___/ /__  / __ / __/ _ `/ _  / -_)  ' \/ // /
+/_/  /_/_/   \___/ /_/ |_\__/\_,_/\_,_/\__/_/_/_/\_, / 
+                                                /___/  
 
 EOF
 }
@@ -78,35 +78,35 @@ function main {
   display_banner
   check_arguments "$@"
 
-  while [[ $# -ge 1 ]]; do
-    case "$1" in
-      -h)
-        display_usage
-        exit 0
-        ;;
-      -v)
-        echo "Version 1.0"
-                exit 0
-        ;;
-      -i)
-        validate_ip "$2"
-        find_location "$2"
-        exit 0
-        ;;
-      -u)
-        validate_url "$2"
-        IP=$(ping -c 1 "$2" | grep -oP '(\d{1,3}\.){3}\d{1,3}' -m 1)
-        find_location "$IP"
-        exit 0
-        ;;
-      *)
-        echo "Unknown option: $1"
-        display_usage
-        exit 1
-        ;;
-    esac
-    shift
-  done
+
+  case "$1" in
+    -h)
+      display_usage
+      exit 0
+      ;;
+    -v)
+      echo "Version 1.0"
+              exit 0
+      ;;
+    -i)
+      validate_ip "$2"
+      find_location "$2"
+      exit 0
+      ;;
+    -u)
+      validate_url "$2"
+      IP=$(ping -c 1 "$2" | grep -oP '(\d{1,3}\.){3}\d{1,3}' -m 1)
+      find_location "$IP"
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1"
+      display_usage
+      exit 1
+      ;;
+  esac
+  
+
 }
 
 # Call the main function
