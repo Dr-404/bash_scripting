@@ -1,18 +1,4 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed ultrices, urna id tempus mattis, nunc tellus eleifend magna, vel fermentum enim mauris at est.
-1234567890
-Special characters: !@#$%^&*()_+-={}[]|\:;"'<>,.?/~`
-Uppercase Letters: ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Lowercase Letters: abcdefghijklmnopqrstuvwxyz
-Whitespace characters: 
-
-This is a multiline example.
-It contains multiple lines of text.
-The quick brown fox jumps over the lazy dog.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tristique magna.
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce quis tristique justo.
-Nullam tincidunt, erat eget lobortis iaculis, velit enim facilisis nulla, eget consectetur lacus quam nec nisi.
-Maecenas aliquet ultrices tellus sit amet ultrices. Nam sit amet justo urna.
-
-The end.
+Sample text containing abbbbbbc, aac, and abbcc.
+Nulla facilisi. Curabitur auctor turpis ac nulla consequat.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
