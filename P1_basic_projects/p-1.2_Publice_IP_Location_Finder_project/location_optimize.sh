@@ -2,7 +2,7 @@
 # Script     : location.sh
 # Author     : Dr. 404
 # Purpose    : for finding location using public IP
-# Version    : 1.0.0
+# Version    : 1.2.0
 # Created Date   : Fri May 12 08:23:48 PM +0630 2023
 # Modified Date  :
 
@@ -21,7 +21,7 @@ EOF
 # Function to display script usage
 function display_usage {
   cat << EOF
-Usage: $0 [OPTIONS] <url | ip>
+Usage  : $0 [OPTIONS] <url | ip>
 Options:
   -h   Show this help message
   -v   Show version information
@@ -45,7 +45,7 @@ function check_arguments {
 function validate_ip {
   ip_regex='^([0-9]{1,3}\.){3}[0-9]{1,3}$'
 
-  if [[ ! $1 =~ $ip_regex ]]; then
+  if [[ ! $2 =~ $ip_regex ]]; then
     echo "ERROR: Please enter a valid IP address"
     exit 1
   fi
@@ -55,7 +55,7 @@ function validate_ip {
 function validate_url {
   url_regex='^((http|https):\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}(:[0-9]{1,5})?(\/.*)?$'
 
-  if [[ ! $1 =~ $url_regex ]]; then
+  if [[ ! $2 =~ $url_regex ]]; then
     echo "ERROR: Please enter a valid URL address"
     exit 1
   fi
@@ -89,12 +89,12 @@ function main {
               exit 0
       ;;
     -i)
-      validate_ip "$2"
+      validate_ip "$@"
       find_location "$2"
       exit 0
       ;;
     -u)
-      validate_url "$2"
+      validate_url "$@"
       IP=$(ping -c 1 "$2" | grep -oP '(\d{1,3}\.){3}\d{1,3}' -m 1)
       find_location "$IP"
       exit 0
